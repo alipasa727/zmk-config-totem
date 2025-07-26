@@ -26,7 +26,7 @@
         compatible = "zmk,combos";
 
         lt01 {
-            bindings = <&tog 1>;
+            bindings = <&tog 0>;
             key-positions = <8 9>;
         };
 
@@ -61,39 +61,29 @@
         compatible = "zmk,keymap";
 
         base_layer {
-            label = "qwerty";
+            label = "qlu";
             bindings = <
-           &kp Q       &kp W       &kp E         &kp R        &kp T        &kp Y        &kp U        &kp I                &kp O       &kp P
-           &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G        &kp H        &mt RSHFT J  &mt RCTRL K          &mt RALT L  &mt RGUI MINUS
-&kp EQUAL  &kp Z       &kp X       &kp C         &kp V        &kp B        &kp N        &kp M        &kp COMMA            &kp DOT     &kp FSLH        &kp SEMICOLON
-                                   &lt 4 ESCAPE  &bs_dl       &lt 2 TAB    &lt 3 SPACE  &kp ENTER    &lt 5 K_APPLICATION
-            >;
-        };
-
-        QLU {
-            label = "QLU";
-            bindings = <
-        &kp Q       &kp L       &kp U        &kp COMMA    &kp DOT      &kp F   &kp W        &kp R        &kp Y       &kp P
-        &mt LGUI E  &mt LALT I  &mt LCTRL A  &mt LSHFT O  &kp MINUS    &kp K   &mt RSHFT T  &mt RCTRL N  &mt RALT S  &mt RGUI H
-&trans  &kp Z       &kp X       &kp C        &kp V        &kp FSLH     &kp G   &kp D        &kp M        &kp J       &kp B       &trans
-                                &trans       &trans       &trans       &trans  &trans       &trans
+           &kp Q       &kp L       &kp U         &kp COMMA    &kp DOT      &kp F        &kp W        &kp R                &kp Y       &kp P
+           &mt LGUI E  &mt LALT I  &mt LCTRL A   &mt LSHFT O  &kp MINUS    &kp K        &mt RSHFT T  &mt RCTRL N          &mt RALT S  &mt RGUI H
+&kp EQUAL  &kp Z       &kp X       &kp C         &kp V        &kp FSLH     &kp G        &kp D        &kp M                &kp J       &kp B       &kp SEMICOLON
+                                   &lt 3 ESCAPE  &bs_dl       &lt 1 TAB    &lt 2 SPACE  &kp ENTER    &lt 4 K_APPLICATION
             >;
         };
 
         left {
             label = "left";
             bindings = <
-           &kp DOLLAR  &kp HASH              &kp UP_ARROW          &kp ASTERISK           &kp PERCENT      &bs_dl     &kp N7              &kp N8        &kp N9             &kp FSLH
-           &mt LGUI E  &mt LALT LEFT         &mt LCTRL DOWN_ARROW  &mt LSHFT RIGHT        &kp GRAVE        &kp COMMA  &mt RSHFT NUMBER_4  &mt RCTRL N5  &mt RALT NUMBER_6  &mt RIGHT_GUI N0
-&kp EQUAL  &trans      &kp LEFT_PARENTHESIS  &kp AT_SIGN           &kp RIGHT_PARENTHESIS  &kp AMPERSAND    &kp DOT    &kp N1              &kp N2        &kp N3             &kp MINUS         &kp SEMICOLON
-                                             &trans                &trans                 &trans           &trans     &trans              &trans
+           &kp DOLLAR            &kp HASH              &kp UP_ARROW          &kp ASTERISK           &kp PERCENT      &bs_dl     &kp N7              &kp N8        &kp N9             &kp FSLH
+           &mt LGUI EXCLAMATION  &mt LALT LEFT         &mt LCTRL DOWN_ARROW  &mt LSHFT RIGHT        &kp GRAVE        &kp COMMA  &mt RSHFT NUMBER_4  &mt RCTRL N5  &mt RALT NUMBER_6  &mt RIGHT_GUI N0
+&kp EQUAL  &trans                &kp LEFT_PARENTHESIS  &kp AT_SIGN           &kp RIGHT_PARENTHESIS  &kp AMPERSAND    &kp DOT    &kp N1              &kp N2        &kp N3             &kp MINUS         &kp SEMICOLON
+                                                       &trans                &trans                 &trans           &trans     &trans              &trans
             >;
         };
 
         right {
             label = "right";
             bindings = <
-        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &kp LEFT_BRACKET   &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &none
+        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &kp LEFT_BRACKET   &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &kp BSLH
         &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &kp RIGHT_BRACKET  &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &kp RIGHT_GUI
 &trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp APOS           &kp RS(RC(TAB))  &kp RC(TAB)     &kp HOME        &kp END        &trans
                                    &trans        &trans        &trans      &trans             &trans           &trans
