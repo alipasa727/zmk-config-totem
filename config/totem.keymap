@@ -50,6 +50,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        app_layer_del: app_layer_del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "APP_LAYER_DEL";
+            #binding-cells = <0>;
+            bindings = <&lt 4 K_APPLICATION>, <&kp DEL>;
+        };
     };
 
     keymap {
@@ -58,10 +65,10 @@
         base_layer {
             label = "qlu";
             bindings = <
-           &kp Q       &kp L       &kp U         &kp COMMA    &kp DOT      &kp F        &kp W        &kp R                &kp Y       &kp P
-           &mt LGUI E  &mt LALT I  &mt LCTRL A   &mt LSHFT O  &kp MINUS    &kp K        &mt RSHFT T  &mt RCTRL N          &mt RALT S  &mt RGUI H
-&kp EQUAL  &kp Z       &kp X       &kp C         &kp V        &kp FSLH     &kp G        &kp D        &kp M                &kp J       &kp B       &kp SEMICOLON
-                                   &lt 3 ESCAPE  &bs_dl       &lt 1 TAB    &lt 2 SPACE  &kp ENTER    &lt 4 K_APPLICATION
+           &kp Q       &kp L       &kp U         &kp COMMA    &kp DOT      &kp F        &kp W        &kp R           &kp Y       &kp P
+           &mt LGUI E  &mt LALT I  &mt LCTRL A   &mt LSHFT O  &kp MINUS    &kp K        &mt RSHFT T  &mt RCTRL N     &mt RALT S  &mt RGUI H
+&kp EQUAL  &kp Z       &kp X       &kp C         &kp V        &kp FSLH     &kp G        &kp D        &kp M           &kp J       &kp B       &kp SEMICOLON
+                                   &lt 3 ESCAPE  &bs_dl       &lt 1 TAB    &lt 2 SPACE  &kp ENTER    &app_layer_del
             >;
         };
 
