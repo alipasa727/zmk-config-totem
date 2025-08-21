@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PER_APO";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp GRAVE>;
+            bindings = <&kp PERIOD>, <&kp APOS>;
         };
     };
 
