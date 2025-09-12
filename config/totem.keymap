@@ -99,6 +99,13 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp APOS>;
         };
+
+        q_at: q_at {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Q_AT";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp AT_SIGN>;
+        };
     };
 
     keymap {
@@ -107,7 +114,7 @@
         base_layer {
             label = "qlu";
             bindings = <
-             &kp Q       &kp L       &kp U         &com_col     &per_apo     &kp F        &kp W        &kp R           &kp Y       &kp P
+             &q_at       &kp L       &kp U         &com_col     &per_apo     &kp F        &kp W        &kp R           &kp Y       &kp P
              &mt LGUI E  &mt LALT I  &mt LCTRL A   &mt LSHFT O  &min_plu     &kp K        &mt RSHFT T  &mt RCTRL N     &mt RALT S  &mt RGUI H
 &left_kakko  &kp Z       &kp X       &kp C         &kp V        &slash       &kp G        &kp D        &kp M           &kp J       &kp B       &right_kakko
                                      &lt 3 ESCAPE  &bs_dl       &lt 1 TAB    &lt 2 SPACE  &kp ENTER    &app_layer_del
