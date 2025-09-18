@@ -123,34 +123,6 @@
             label = "LETF_ARROW";
         };
 
-        double_pare: double_pare {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
-            label = "DOUBLE_PARE";
-        };
-
-        double_bra: double_bra {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
-            label = "DOUBLE_BRA";
-        };
-
-        double_quo: double_quo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp SQT &kp LEFT>;
-            label = "DOUBLE_QUO";
-        };
-
-        double_double_quo: double_double_quo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT>;
-            label = "DOUBLE_DOUBLE_QUO";
-        };
-
         ppt_l: ppt_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -206,6 +178,27 @@
             bindings = <&kp LA(H) &kp G &kp A &kp C>;
             label = "PPT_c";
         };
+
+        ppt_nuri: ppt_nuri {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp J &kp D &kp S &kp F>;
+            label = "PPT_NURI";
+        };
+
+        ppt_waku: ppt_waku {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp J &kp D &kp S &kp O>;
+            label = "PPT_WAKU";
+        };
+
+        ppt_chobj: ppt_chobj {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp J &kp D &kp E>;
+            label = "PPT_CHOBJ";
+        };
     };
 
     keymap {
@@ -226,7 +219,7 @@
             bindings = <
         &kp HASH              &kp DOLLAR     &kp UP_ARROW          &kp ASTERISK     &kp PERCENT    &bs_dl    &kp N7              &kp N8        &kp N9             &slash
         &mt LGUI EXCLAMATION  &mt LALT LEFT  &mt LCTRL DOWN_ARROW  &mt LSHFT RIGHT  &kp CARET      &com_col  &mt RSHFT NUMBER_4  &mt RCTRL N5  &mt RALT NUMBER_6  &mt RIGHT_GUI N0
-&trans  &trans                &letf_arrow    &double_pare          &right_arrow     &kp AMPS       &per_apo  &kp N1              &kp N2        &kp N3             &min_plu          &trans
+&trans  &trans                &trans         &letf_arrow           &right_arrow     &kp AMPS       &per_apo  &kp N1              &kp N2        &kp N3             &min_plu          &trans
                                              &trans                &trans           &trans         &trans    &trans              &trans
             >;
         };
@@ -234,19 +227,19 @@
         right {
             label = "right";
             bindings = <
-        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &double_quo         &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &double_bra
-        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &double_double_quo  &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &kp RIGHT_GUI
-&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE           &kp RS(RC(TAB))  &kp RC(TAB)     &kp HOME        &kp END        &trans
-                                   &trans        &trans        &trans      &trans              &trans           &trans
+        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &kp HOME   &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &none
+        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &kp END    &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &mmv MOVE_UP
+&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE  &kp RS(RC(TAB))  &kp RC(TAB)     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+                                   &mkp MB3      &mkp MB2      &mkp MB1    &trans     &trans           &trans
             >;
         };
 
-        ms {
+        ppt {
             bindings = <
-        &none   &none         &none             &none           &none    &none     &none           &mmv MOVE_UP    &none            &none
-        &ppt_v  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &ppt_t
-&ppt_v  &ppt_c  &ppt_m        &none             &none           &none    &none     &none           &none           &ppt_l           &ppt_b  &ppt_r
-                              &none             &none           &none    &mkp MB1  &mkp MB2        &mkp MB3
+       &none  &none  &none  &none  &none    &ppt_nuri   &ppt_h  &ppt_t  &ppt_v  &none
+       &none  &none  &none  &none  &none    &ppt_waku   &ppt_l  &ppt_b  &ppt_r  &none
+&none  &none  &none  &none  &none  &none    &ppt_chobj  &ppt_m  &ppt_c  &none   &none  &none
+                     &none  &none  &none    &none       &none   &none
             >;
         };
 
