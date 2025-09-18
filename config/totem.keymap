@@ -108,6 +108,50 @@
         };
     };
 
+    macros {
+        right_arrow: right_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "RIGHT_ARROW";
+        };
+
+        letf_arrow: letf_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp MINUS>;
+            label = "LETF_ARROW";
+        };
+
+        double_pare: double_pare {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "DOUBLE_PARE";
+        };
+
+        double_bra: double_bra {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "DOUBLE_BRA";
+        };
+
+        double_quo: double_quo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "DOUBLE_QUO";
+        };
+
+        double_double_quo: double_double_quo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "DOUBLE_DOUBLE_QUO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -126,7 +170,7 @@
             bindings = <
         &kp HASH              &kp DOLLAR     &kp UP_ARROW          &kp ASTERISK     &kp PERCENT    &bs_dl    &kp N7              &kp N8        &kp N9             &slash
         &mt LGUI EXCLAMATION  &mt LALT LEFT  &mt LCTRL DOWN_ARROW  &mt LSHFT RIGHT  &kp CARET      &com_col  &mt RSHFT NUMBER_4  &mt RCTRL N5  &mt RALT NUMBER_6  &mt RIGHT_GUI N0
-&trans  &trans                &left_kakko    &kp AT_SIGN           &right_kakko     &kp AMPS       &per_apo  &kp N1              &kp N2        &kp N3             &min_plu          &trans
+&trans  &trans                &letf_arrow    &double_pare          &right_arrow     &kp AMPS       &per_apo  &kp N1              &kp N2        &kp N3             &min_plu          &trans
                                              &trans                &trans           &trans         &trans    &trans              &trans
             >;
         };
@@ -134,10 +178,10 @@
         right {
             label = "right";
             bindings = <
-        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &none      &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &none
-        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &none      &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &kp RIGHT_GUI
-&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE  &kp RS(RC(TAB))  &kp RC(TAB)     &kp HOME        &kp END        &trans
-                                   &trans        &trans        &trans      &trans     &trans           &trans
+        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &double_quo         &kp PAGE_UP      &kp UP_ARROW    &kp PAGE_DOWN   &double_bra
+        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &double_double_quo  &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &kp RIGHT_GUI
+&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE           &kp RS(RC(TAB))  &kp RC(TAB)     &kp HOME        &kp END        &trans
+                                   &trans        &trans        &trans      &trans              &trans           &trans
             >;
         };
 
