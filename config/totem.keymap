@@ -151,11 +151,11 @@
             label = "DOUBLE_DOUBLE_QUO";
         };
 
-        ppt_left: ppt_left {
+        ppt_l: ppt_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(H) &kp G &kp A &kp L>;
-            label = "PPT_LEFT";
+            label = "PPT_L";
         };
 
         ppt_r: ppt_r {
@@ -177,6 +177,34 @@
             #binding-cells = <0>;
             bindings = <&kp LA(H) &kp G &kp A &kp B>;
             label = "PPT_B";
+        };
+
+        ppt_h: ppt_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp H>;
+            label = "PPT_H";
+        };
+
+        ppt_v: ppt_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp V>;
+            label = "PPT_V";
+        };
+
+        ppt_m: ppt_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp M>;
+            label = "PPT_M";
+        };
+
+        ppt_c: ppt_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp C>;
+            label = "PPT_c";
         };
     };
 
@@ -215,10 +243,10 @@
 
         ms {
             bindings = <
-       &none           &none          &kp PRINTSCREEN   &none           &none    &none     &none           &mmv MOVE_UP    &none            &none
-       &kp LA(LC(I))   &kp LEFT_ALT   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &kp LA(LC(N9))  &kp LA(LC(W))  &kp LA(LC(B))     &none           &none    &none     &ppt_left       &ppt_b          &ppt_t           &ppt_r  &none
-                                      &none             &none           &none    &mkp MB1  &mkp MB2        &mkp MB3
+       &none  &none         &none             &none           &ppt_v    &ppt_h    &none           &mmv MOVE_UP    &none            &none
+       &none  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &ppt_m    &ppt_c    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none  &none  &none         &none             &none           &none     &none     &ppt_l          &ppt_b          &ppt_c           &ppt_r  &none
+                            &none             &none           &none     &mkp MB1  &mkp MB2        &mkp MB3
             >;
         };
 
