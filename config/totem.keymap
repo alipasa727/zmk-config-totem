@@ -243,10 +243,10 @@
 
         ms {
             bindings = <
-       &none  &none         &none             &none           &ppt_v    &ppt_h    &none           &mmv MOVE_UP    &none            &none
-       &none  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &ppt_m    &ppt_c    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &none  &none         &none             &none           &none     &none     &ppt_l          &ppt_b          &ppt_c           &ppt_r  &none
-                            &none             &none           &none     &mkp MB1  &mkp MB2        &mkp MB3
+        &none   &none         &none             &none           &none    &none     &none           &mmv MOVE_UP    &none            &none
+        &ppt_v  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &ppt_t
+&ppt_v  &ppt_c  &ppt_m        &none             &none           &none    &none     &none           &none           &ppt_l           &ppt_b  &ppt_r
+                              &none             &none           &none    &mkp MB1  &mkp MB2        &mkp MB3
             >;
         };
 
