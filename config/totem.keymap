@@ -150,6 +150,34 @@
             bindings = <&kp DQT &kp DQT &kp LEFT>;
             label = "DOUBLE_DOUBLE_QUO";
         };
+
+        ppt_left: ppt_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp L>;
+            label = "PPT_LEFT";
+        };
+
+        ppt_r: ppt_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp R>;
+            label = "PPT_R";
+        };
+
+        ppt_t: ppt_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp T>;
+            label = "PPT_T";
+        };
+
+        ppt_b: ppt_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp G &kp A &kp B>;
+            label = "PPT_B";
+        };
     };
 
     keymap {
@@ -187,16 +215,16 @@
 
         ms {
             bindings = <
-       &none     &none         &kp PRINTSCREEN   &none           &none    &none     &none           &mmv MOVE_UP    &none            &none
-       &mkp MB1  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&none  &mkp MB2  &none         &none             &none           &none    &none     &none           &none           &none            &none  &none
-                               &none             &none           &none    &mkp MB1  &mkp MB2        &mkp MB3
+       &none           &none          &kp PRINTSCREEN   &none           &none    &none     &none           &mmv MOVE_UP    &none            &none
+       &kp LA(LC(I))   &kp LEFT_ALT   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none  &kp LA(LC(N9))  &kp LA(LC(W))  &kp LA(LC(B))     &none           &none    &none     &ppt_left       &ppt_b          &ppt_t           &ppt_r  &none
+                                      &none             &none           &none    &mkp MB1  &mkp MB2        &mkp MB3
             >;
         };
 
         conf {
             bindings = <
-              &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none  &none       &none              &none            &none
+              &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none  &none       &kp RG(RS(S))      &none            &none
               &bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none
 &out OUT_BLE  &bt BT_CLR     &bt BT_CLR_ALL  &none          &none          &none            &none  &none       &none              &none            &none  &out OUT_USB
                                              &none          &none          &none            &none  &none       &none
