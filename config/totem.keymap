@@ -227,10 +227,10 @@
         right {
             label = "right";
             bindings = <
-        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &kp HOME   &kp RS(RC(TAB))  &kp UP_ARROW    &kp RC(TAB)     &kp PAGE_UP
-        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &kp END    &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &kp PAGE_DOWN
-&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
-                                   &mkp MB3      &mkp MB2      &mkp MB1    &trans     &trans           &trans
+        &kp F11      &kp F5        &kp F4        &kp F12       &kp F9      &kp PAGE_UP    &kp RS(RC(TAB))  &kp UP_ARROW    &kp RC(TAB)     &kp HOME
+        &mt LGUI F1  &mt LALT F10  &mt LCTRL F6  &mt LSHFT F2  &kp F3      &kp PAGE_DOWN  &mt RSHFT LEFT   &mt RCTRL DOWN  &mt RALT RIGHT  &mt RIGHT_GUI END
+&trans  &trans       &trans        &kp F8        &kp F7        &kp CAPS    &kp GRAVE      &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT    &trans
+                                   &mkp MB3      &mkp MB2      &mkp MB1    &trans         &trans           &trans
             >;
         };
 
