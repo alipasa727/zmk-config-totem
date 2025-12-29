@@ -25,8 +25,8 @@
     combos {
         compatible = "zmk,combos";
 
-        kana {
-            bindings = <&kp RA(GRAVE)>;
+        en {
+            bindings = <&kp LANGUAGE_2>;
             key-positions = <26 28>;
         };
 
@@ -38,6 +38,11 @@
         opst {
             bindings = <&kp LS(LC(V))>;
             key-positions = <24 25>;
+        };
+
+        jp {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <27 28>;
         };
     };
 
