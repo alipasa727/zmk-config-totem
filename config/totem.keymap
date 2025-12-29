@@ -199,6 +199,34 @@
             bindings = <&kp LEFT_ALT &kp J &kp D &kp E>;
             label = "PPT_CHOBJ";
         };
+
+        fc: fc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H) &kp F &kp C>;
+            label = "FC";
+        };
+
+        spf_dc: spf_dc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LA(I)>,
+                <&macro_wait_time 75>,
+                <&kp LS(Y)>,
+                <&macro_wait_time 75>,
+                <&kp C>;
+
+            label = "SPF_DC";
+        };
+
+        spf_sl: spf_sl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(I)>, <&macro_wait_time 75>, <&kp C>;
+
+            label = "SPF_SL";
+        };
     };
 
     keymap {
@@ -237,8 +265,8 @@
         ppt {
             bindings = <
        &none  &none  &none  &none  &none    &ppt_nuri   &ppt_h  &ppt_t  &ppt_v  &none
-       &none  &none  &none  &none  &none    &ppt_waku   &ppt_l  &ppt_b  &ppt_r  &none
-&none  &none  &none  &none  &none  &none    &ppt_chobj  &ppt_m  &ppt_c  &none   &none  &none
+       &none  &none  &none  &none  &none    &ppt_waku   &ppt_l  &ppt_b  &ppt_r  &spf_dc
+&none  &none  &none  &none  &none  &none    &ppt_chobj  &ppt_m  &ppt_c  &fc     &spf_sl  &none
                      &none  &none  &none    &none       &none   &none
             >;
         };
